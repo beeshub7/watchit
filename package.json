@@ -11,5 +11,9 @@
     "license": "ISC",
     "bin": {
         "watchit": "index.js"
+    },
+    "dependencies": {
+        "chokidar": "^3.5.1",
+        "lodash.debounce": "^4.0.8"
     }
 }
