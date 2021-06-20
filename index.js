@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const {spawn} = require('child_process');
 
 const chokidar = require('chokidar');
 const debounce = require('lodash.debounce');
@@ -19,7 +20,7 @@ program
         }
 
         const start = debounce(() => {
-            console.log('START USERS PROGRAM');
+            spawn('node', [filename], {stdio: 'inherit'});
         }, 100);
 
         chokidar
